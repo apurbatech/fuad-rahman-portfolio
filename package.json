@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "preinstall": "npx npm@9 install --legacy-peer-deps",
+    "install": "npx npm@9 install --legacy-peer-deps",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
