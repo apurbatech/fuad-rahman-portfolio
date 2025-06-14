@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "install": "npx npm@9 install --legacy-peer-deps",
+    "preinstall": "npx npm@9 install --legacy-peer-deps",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install": ""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
