@@ -1,0 +1,557 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.app.ventures {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app.academia {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 100;
+}
+
+.page-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.ventures .page-toggle {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.ventures .page-toggle:hover {
+  background-color: #333333;
+}
+
+.academia .page-toggle {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.academia .page-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+/* Page Container */
+.page-container {
+  position: relative;
+  width: 200%;
+  height: 100vh;
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ventures .page-container {
+  transform: translateX(0);
+}
+
+.academia .page-container {
+  transform: translateX(-50%);
+}
+
+/* Individual Pages */
+.page {
+  width: 50%;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ventures-page {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.academia-page {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 120px 40px 80px;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 96px;
+}
+
+.name {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.ventures .title {
+  color: #666666;
+}
+
+.academia .title {
+  color: #cccccc;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.ventures .subtitle {
+  color: #999999;
+}
+
+.academia .subtitle {
+  color: #999999;
+}
+
+.metrics {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.ventures .metric {
+  background-color: #f8f9fa;
+  color: #666666;
+}
+
+.academia .metric {
+  background-color: #1a1a1a;
+  color: #cccccc;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 96px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+
+/* Ventures */
+.venture {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+}
+
+.ventures .venture {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.academia .venture {
+  border-bottom: 1px solid #333333;
+}
+
+.venture:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.venture-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.company {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background-color: #f0f9ff;
+  color: #0369a1;
+}
+
+.status-badge.current {
+  background-color: #f0fdf4;
+  color: #166534;
+}
+
+.status-badge.acquired {
+  background-color: #fdf4ff;
+  color: #86198f;
+}
+
+.role {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.ventures .role {
+  color: #666666;
+}
+
+.academia .role {
+  color: #cccccc;
+}
+
+.period {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.ventures .period {
+  color: #999999;
+}
+
+.academia .period {
+  color: #999999;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ventures .description {
+  color: #666666;
+}
+
+.academia .description {
+  color: #cccccc;
+}
+
+/* Academia-specific styles */
+.position {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #333333;
+}
+
+.position:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.position-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.institution {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.education {
+  margin-bottom: 32px;
+}
+
+.degree {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.year {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 16px;
+}
+
+.research-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  text-align: center;
+  padding: 24px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.metric-number {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.metric-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #cccccc;
+}
+
+.metric-description {
+  font-size: 12px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.publication {
+  margin-bottom: 32px;
+}
+
+.paper-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.paper-details {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 12px;
+}
+
+.paper-description {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.research-areas {
+  display: grid;
+  gap: 24px;
+}
+
+.research-area {
+  padding: 24px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.area-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.area-description {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+.government-work {
+  padding: 24px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.project-details {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 12px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+}
+
+/* Contact */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 12px 0;
+  transition: opacity 0.2s ease;
+}
+
+.ventures .contact-link {
+  color: #000000;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.ventures .contact-link:hover {
+  opacity: 0.7;
+}
+
+.academia .contact-link {
+  color: #ffffff;
+  border-bottom: 1px solid #333333;
+}
+
+.academia .contact-link:hover {
+  opacity: 0.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav {
+    top: 24px;
+    right: 24px;
+  }
+  
+  .container {
+    padding: 100px 24px 60px;
+  }
+  
+  .hero {
+    margin-bottom: 64px;
+  }
+  
+  .name {
+    font-size: 36px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .section {
+    margin-bottom: 64px;
+  }
+  
+  .section-title {
+    margin-bottom: 32px;
+  }
+  
+  .venture, .position {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
+  
+  .venture-header, .position-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .metrics {
+    gap: 16px;
+  }
+  
+  .research-metrics {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 80px 20px 40px;
+  }
+  
+  .name {
+    font-size: 32px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .metrics {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+  
+  .page-container {
+    transition: none !important;
+  }
+}
+
