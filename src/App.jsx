@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowRight, ExternalLink, Mail, ShieldHalf, LetterText, GraduationCap, HeartHandshake } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bot, BookType, ExternalLink, Mail, ShieldHalf, Languages, LetterText, GraduationCap, HeartHandshake } from 'lucide-react';
 import { FaLinkedin } from 'react-icons/fa';
 import './App.css';
 
@@ -87,7 +87,7 @@ function App() {
               <h2 className="section-title">Successful Exits</h2>
               <div className="venture">
                 <div className="venture-header">
-                  <h3 className="company">WSD</h3>
+                  <h3 className="company">WSD (formerly Wall St Docs)</h3>
                   <span className="status-badge exited">Exited</span>
                 </div>
                 <p className="role">Global Head of Filing Services</p>
@@ -165,7 +165,7 @@ function App() {
             {/* Hero */}
             <section className="hero">
               <h1 className="name">Dr. Fuad Rahman</h1>
-              <p className="title">AI Pioneer & Professor</p>
+              <p className="title">AI Evangelist & Professor</p>
               <p className="subtitle">Finding cool new things to do with neural networks since 1992.</p>
               <div className="metrics">
                 <span className="metric">1,965 Citations</span>
@@ -199,15 +199,79 @@ function App() {
                 <p className="year">1996</p>
                 <p className="description">
                   Dealt with building novel systems to classify objects such as calcification on breast mammograms, handwritten/printed characters, words and documents. 
-                  Early work with multiple classifiers ('experts') and unified frameworks/techniques for decisioning systems.<br></br><br></br>
+                  Early work with multiple classifiers ('experts') and unified frameworks/techniques for decisioning systems.<br /><br />
                   Supervisor: Prof. Michael Fairhurst | Computer Vision and Image Processing
                 </p>
               </div>
             </section>
 
-            {/* Recent Publications */}
+            {/* Patents & Recent Publications */}
             <section className="section">
-              <h2 className="section-title">Selected Publications</h2>
+              <h2 className="section-title">Selected Publications & Inventions</h2>
+              <details className="group bg-neutral-900 rounded-md p-4">
+                <summary className="cursor-pointer text-white font-semibold flex justify-between items-center">
+                  <span className="group-open:hidden" style={{color: "#c0362c"}}>View or hide patents ↓</span>
+                </summary>
+                <div className="mt-4 space-y-4">
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Virtual Reality Systems and Methods for Improving Clinical Outcomes"
+                    </h3>
+                    <p className="paper-details">US 10,551,910 • Co-authors: S Hossainy, MJ Slepian</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Systems and Methods for Implementing an Early Warning System for Stroke Patients"
+                    </h3>
+                    <p className="paper-details">US 62/599,542 • Co-author: S Hossainy</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Treatment Recommendation System And Method"
+                    </h3>
+                    <p className="paper-details">US 15/592,064 • Co-author: Roni Amiel</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Cirrhosis Forecasting In Human Subjects"
+                    </h3>
+                    <p className="paper-details">US 15/587,245 • Co-author: Roni Amiel</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Systems and Methods for Creating Contextualized Summaries of Patient Notes from Electronic Medical Record Systems"
+                    </h3>
+                    <p className="paper-details">US 62/294,701 • Co-author: S Hossainy</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Health information (data) medical collection, processing and feedback continuum systems and methods"
+                    </h3>
+                    <p className="paper-details">US 62/194,904 • Co-authors: S Hossainy, MJ Slepian</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Patient coordination system and method"
+                    </h3>
+                    <p className="paper-details">US 62/194,945 • Co-author: MJ Slepian</p>
+                  </div>
+
+                  <div className="publication">
+                    <h3 className="paper-title">
+                      "Systems and methods for analyzing healthcare data"
+                    </h3>
+                    <p className="paper-details">US 62/194,920 • Co-author: MJ Slepian</p>
+                  </div>
+                </div>
+              </details>
+
+              <br />
               
               <div className="publication">
                 <h3 className="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1386505624004271" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
@@ -240,17 +304,17 @@ function App() {
               
               <div className="research-areas">
                 <div className="research-area">
-                  <h3 className="area-title">Vertical AI</h3>
+                  <h3 className="area-title"><Bot size={14}/> AI</h3>
                   <p className="area-description">Domain-specific applications of machine learning including modeling disease outbreaks, consensus mechanisms, and radiology.</p>
                 </div>
                 
                 <div className="research-area">
-                  <h3 className="area-title">Low-Resource Languages</h3>
+                  <h3 className="area-title"><Languages size={14}/> Low-Resource Languages</h3>
                   <p className="area-description">Seminal research on underrepresented languages, particularly Bengali, spanning document classification, OCR, accessiblity.</p>
                 </div>
                 
                 <div className="research-area">
-                  <h3 className="area-title">Document Analysis</h3>
+                  <h3 className="area-title"><BookType size={14}/> Document Analysis</h3>
                   <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD program.</p>
                 </div>
               </div>
@@ -258,13 +322,12 @@ function App() {
 
             {/* Military & Government Work */}
             <section className="section">
-              <h2 className="section-title"><ShieldHalf size={14}/> US Military & Defense Contractor</h2>
+              <h2 className="section-title"><ShieldHalf size={14}/> US Defense Contracts</h2>
               
               <div className="box">
                 <h3 className="project-title">Principal Investigator</h3>
                 <p className="project-details">US Navy, Army, Air Force • 2001 – 2009</p>
-                <p className="project-description">Wrote and won grants for advanced research, focusing on applied NLP, information retrieval, and touchscreen human-computer interfaces for defense use cases. Developed SOTA domain-specific NLP during the AI winter. Conducted field visits to U.S. military installations for mission-critical deployment.
-                </p>
+                <p className="project-description">Honored to have written, won, and delivered results on grants for advanced research for several divisions of the American military. Mainly applied NLP, information retrieval, and touchscreen human-computer interfaces for classified use cases. Developed SOTA domain-specific NLP during the AI winter. Conducted field visits to US military installations for mission-critical deployment.</p>
               </div>
             </section>
 

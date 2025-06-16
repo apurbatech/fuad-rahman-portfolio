@@ -168,15 +168,18 @@ body {
 
 .metrics {
   display: flex;
-  gap: 24px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .metric {
   font-size: 14px;
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 20px;
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .ventures .metric {
