@@ -66,8 +66,8 @@ function App() {
                 <p className="role">Founder & CEO</p>
                 <p className="period">2009 – Present</p>
                 <p className="description">
-                  Trusted by Fortune 500s and national governments to architect data-driven transformations, specializing in natural language & computer vision. 
-                  Leading product development and strategic partnerships across global markets.
+                  Trusted by Fortune 500s and national governments to architect data-driven transformations, particularly natural language & computer vision. 
+                  Leading R&D and strategic partnerships across global markets.
                 </p>
               </div>
 
@@ -166,7 +166,7 @@ function App() {
             <section className="hero">
               <h1 className="name">Dr. Fuad Rahman</h1>
               <p className="title">AI Evangelist & Professor</p>
-              <p className="subtitle">Finding cool new things to do with neural networks since 1992.</p>
+              <p className="subtitle">Finding cool new things to do with neural networks since 1992</p>
               <div>
                 <span className="status-badge exited" style={{ color: "#c0362c" }}>1,965 Citations</span>
                 <span className="status-badge exited">h-index 26</span>
