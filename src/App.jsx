@@ -42,15 +42,15 @@ function App() {
             <section className="hero">
               <h1 className="name">Fuad Rahman</h1>
               <p className="title">Serial Entrepreneur</p>
-              <p className="subtitle">Building enterprise software & global product teams for 25+ years.</p>
-              <p className="subsubtitle">Audiophile, 2x Burner, Trekkie, Philanthropist, Father.</p>
+              <p className="subtitle">Building enterprise software & global product teams for 25+ years</p>
+              <p className="subsubtitle">Audiophile, 2x Burner, Trekkie, Philanthropist, Father</p>
 
 
               <div className="metrics">
-                <span className="metric" style={{ color: "#c0362c" }}>SF Bay Area</span>
-                <span className="metric">Four Exits</span>
-                <span className="metric" style={{ color: "#166534" }}>Fintech</span>
-                <span className="metric" style={{ color: "#0369a1" }}>Healthtech</span>
+                <span className="status-badge" style={{ color: "#c0362c" }}>Bay Area</span>
+                <span className="status-badge">Four Exits</span>
+                <span className="status-badge" style={{ color: "#166534" }}>Fintech</span>
+                <span className="status-badge" style={{ color: "#0369a1" }}>Healthtech</span>
               </div>
             </section>
 
@@ -76,8 +76,8 @@ function App() {
 
                 <p className="project-details">2021 – Present</p>
                 <ul className="project-description" style={{color: "#666666"}}>
-                  <li>&nbsp; &nbsp; <a href="https://ahiri.ca/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Ahiri</a> (Marketplaces), 2021</li>
-                  <li>&nbsp; &nbsp; <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Dorsal.fyi</a> (Healthcare AI), 2024</li>
+                  <li>&nbsp; &nbsp; <a href="https://ahiri.ca/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Ahiri</a> <ExternalLink size={10} /> (Marketplaces), 2021</li>
+                  <li>&nbsp; &nbsp; <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Dorsal.fyi</a> <ExternalLink size={10} /> (Healthcare AI), 2024</li>
                 </ul>
               </div>
             </section>
@@ -106,7 +106,7 @@ function App() {
                 <p className="role">Founder & CEO</p>
                 <p className="period">2020 – 2023</p>
                 <p className="description">
-                  Acquired by <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>WSD</a>. 
+                  Acquired by <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>WSD</a> <ExternalLink size={10} />. 
                   Built the first fully automated, end-to-end tool for SEC-compliant filing and electronic document conversion (EDGARization). 
                   Used by Citigroup, Barclays, and other Tier 1 banks. 
                 </p>
@@ -122,7 +122,7 @@ function App() {
                 <p className="description">
                   Acquired by Irish Acquisitions. 
                   ML-driven precision medicine and population health platorm with sophisticated cohort analysis, launched in collaboration with&nbsp; 
-                  <a href="https://phs.org/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Presbyterian Healthcare Services</a> in Albuquerque, NM.
+                  <a href="https://phs.org/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Presbyterian Healthcare Services</a> <ExternalLink size={10} /> in Albuquerque, NM.
                 </p>
               </div>
 
@@ -134,7 +134,7 @@ function App() {
                 <p className="role">Founder & CEO</p>
                 <p className="period">2011 - 2020</p>
                 <p className="description">
-                  Acquired by <a href="https://www.newsfilecorp.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Newsfile</a>, before being spun off into EDGAR Filing Service. 
+                  Acquired by <a href="https://www.newsfilecorp.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Newsfile</a> <ExternalLink size={10} />, before being spun off into EDGAR Filing Service. 
                   First cloud-hosted solution empowering Reporting Issuers to achieve compliance for their structured products.
                 </p>
               </div>
@@ -168,9 +168,9 @@ function App() {
               <p className="title">AI Evangelist & Professor</p>
               <p className="subtitle">Finding cool new things to do with neural networks since 1992.</p>
               <div className="metrics">
-                <span className="metric">1,965 Citations</span>
-                <span className="metric">h-index 26</span>
-                <span className="metric">i10-index 46</span>
+                <span className="status-badge exited" style={{ color: "#c0362c" }}>1,965 Citations</span>
+                <span className="status-badge exited">h-index 26</span>
+                <span className="status-badge current" style={{ color: "#0369a1" }}>i10-index 46</span>
               </div>
             </section>
 
@@ -181,11 +181,10 @@ function App() {
               <div className="position">
                 <div className="position-header">
                   <h3 className="institution">University of Arizona</h3>
-                  <span className="status-badge current">Current</span>
                 </div>
                 <p className="role">Adjunct Professor</p>
                 <p className="period">2020 – Present</p>
-                <p className="description">Teaching graduate students about AI entrepreneurship. Researching applied AI for medical devices and population health.</p>
+                <p className="description">Teaching graduate students about AI entrepreneurship. Contributor to ongoing research applying AI to medical devices and population health.</p>
               </div>
             </section>
 
@@ -199,15 +198,37 @@ function App() {
                 <p className="year">1996</p>
                 <p className="description">
                   Dealt with building novel systems to classify objects such as calcification on breast mammograms, handwritten/printed characters, words and documents. 
-                  Early work with multiple classifiers ('experts') and unified frameworks/techniques for decisioning systems.<br /><br />
+                  Early work with multiple classifiers techniques ('mixture of experts') and unified frameworks for decisioning systems.<br /><br />
                   Supervisor: Prof. Michael Fairhurst | Computer Vision and Image Processing
                 </p>
               </div>
             </section>
 
+             {/* Research Areas */}
+             <section className="section">
+              <h2 className="section-title">Research Areas</h2>
+              
+              <div className="research-areas">
+                <div className="research-area">
+                  <h3 className="area-title" style={{ color: "#c0362c" }}><Bot size={14}/> AI</h3>
+                  <p className="area-description">Domain-specific applications of machine learning including modeling disease outbreaks, consensus mechanisms, and radiology.</p>
+                </div>
+                
+                <div className="research-area">
+                  <h3 className="area-title"><Languages size={14}/> Low-Resource Languages</h3>
+                  <p className="area-description">Seminal research on underrepresented languages, particularly Bengali, spanning document classification, OCR, accessiblity.</p>
+                </div>
+                
+                <div className="research-area">
+                  <h3 className="area-title" style={{ color: "#0369a1" }}><BookType size={14}/> Document Analysis</h3>
+                  <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD program.</p>
+                </div>
+              </div>
+            </section>
+
             {/* Patents & Recent Publications */}
             <section className="section">
-              <h2 className="section-title">Selected Publications & Inventions</h2>
+              <h2 className="section-title">Selected Patents and Publications</h2>
               <details className="group bg-neutral-900 rounded-md p-4">
                 <summary className="cursor-pointer text-white font-semibold flex justify-between items-center">
                   <span className="group-open:hidden" style={{color: "#c0362c"}}>View or hide patents ↓</span>
@@ -275,8 +296,8 @@ function App() {
               
               <div className="publication">
                 <h3 className="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1386505624004271" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
-                  "OptimCLM: Optimizing clinical language models for predicting patient outcomes via knowledge distillation, pruning and quantization"
-                </a></h3>
+                  OptimCLM: Optimizing clinical language models for predicting patient outcomes via knowledge distillation, pruning and quantization
+                </a> <ExternalLink size={14} /></h3>
                 <p className="paper-details">2025 • Co-authors: MJ Hasan, N Mohammed </p>
                 <p className="paper-description">Latest research small language models in healthcare, achieving 22.88 x compression and 28.7 x speedup with minimal AUROC loss.</p>
               </div>
@@ -284,7 +305,7 @@ function App() {
               <div className="publication">
                 <h3 className="paper-title"><a href="https://link.springer.com/chapter/10.1007/3-540-45869-7_21" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
                 Multiple classifier combination for character recognition: revisiting the majority voting system and its variations
-                </a></h3>
+                </a> <ExternalLink size={14} /></h3>
                 <p className="paper-details">2002 • Co-authors: H Alam, MC Fairhurst</p>
                 <p className="paper-description">Pioneering work in natural language processing for Bengali, serving 400+ million speakers worldwide. Early contributions to OCR and pattern recognition.</p>
               </div>
@@ -292,37 +313,15 @@ function App() {
               <div className="publication">
                 <h3 className="paper-title"><a href="https://hrcak.srce.hr/clanak/221156" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
                   A complete Bengali OCR: A novel hybrid approach to handwritten Bengali character recognition
-                </a></h3>
+                </a> <ExternalLink size={14} /></h3>
                 <p className="paper-details">1998 • Co-author: M Kaykobad</p>
                 <p className="paper-description">The first OCR for Bengali, serving 400+ million speakers worldwide. With the data/compute limitations of the time, this SOTA model combined structural analysis and template matching.</p>
               </div>
             </section>
 
-            {/* Research Areas */}
-            <section className="section">
-              <h2 className="section-title">Research Areas</h2>
-              
-              <div className="research-areas">
-                <div className="research-area">
-                  <h3 className="area-title"><Bot size={14}/> AI</h3>
-                  <p className="area-description">Domain-specific applications of machine learning including modeling disease outbreaks, consensus mechanisms, and radiology.</p>
-                </div>
-                
-                <div className="research-area">
-                  <h3 className="area-title"><Languages size={14}/> Low-Resource Languages</h3>
-                  <p className="area-description">Seminal research on underrepresented languages, particularly Bengali, spanning document classification, OCR, accessiblity.</p>
-                </div>
-                
-                <div className="research-area">
-                  <h3 className="area-title"><BookType size={14}/> Document Analysis</h3>
-                  <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD program.</p>
-                </div>
-              </div>
-            </section>
-
             {/* Military & Government Work */}
             <section className="section">
-              <h2 className="section-title"><ShieldHalf size={14}/> US Defense Contracts</h2>
+              <h2 className="section-title">🇺🇸 US Defense Contracts</h2>
               
               <div className="box">
                 <h3 className="project-title">Principal Investigator</h3>
