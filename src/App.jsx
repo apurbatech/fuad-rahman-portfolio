@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink, Mail, Linkedin } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink, Mail, ShieldHalf, LetterText, GraduationCap, HeartHandshake } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import './App.css';
 
 function App() {
@@ -18,8 +19,17 @@ function App() {
           className="page-toggle"
           aria-label={`Switch to ${currentPage === 'ventures' ? 'Academia' : 'Ventures'} page`}
         >
-          {currentPage === 'ventures' ? 'Academia' : 'Ventures'}
-          <ArrowRight size={16} />
+          {currentPage === 'ventures' ? (
+            <>
+              Academia
+              <ArrowRight size={16} className="mr-1" />
+            </>
+          ) : (
+            <>
+              <ArrowLeft size={16} className="ml-1" />
+              Ventures
+            </>
+          )}
         </button>
       </nav>
 
@@ -32,42 +42,61 @@ function App() {
             <section className="hero">
               <h1 className="name">Fuad Rahman</h1>
               <p className="title">Serial Entrepreneur</p>
-              <p className="subtitle">Building enterprise software for 25+ years. Four successful exits.</p>
+              <p className="subtitle">Building enterprise software & global product teams for 25+ years.</p>
+              <p className="subsubtitle">Audiophile, 2x Burner, Trekkie, Philanthropist, Father.</p>
+
+
               <div className="metrics">
-                <span className="metric">Silicon Valley, CA</span>
-                <span className="metric">4 Successful Exits</span>
-                <span className="metric">25+ Years</span>
+                <span className="metric" style={{ color: "#c0362c" }}>SF Bay Area</span>
+                <span className="metric">Four Exits</span>
+                <span className="metric" style={{ color: "#166534" }}>Fintech</span>
+                <span className="metric" style={{ color: "#0369a1" }}>Healthtech</span>
               </div>
             </section>
 
             {/* Current Ventures */}
             <section className="section">
-              <h2 className="section-title">Current Ventures</h2>
+              <h2 className="section-title">Active Ventures</h2>
               
               <div className="venture">
                 <div className="venture-header">
                   <h3 className="company">Apurba Technologies</h3>
-                  <span className="status-badge active">Active</span>
+                  <span className="status-badge current">Current</span>
                 </div>
                 <p className="role">Founder & CEO</p>
                 <p className="period">2009 – Present</p>
-                <p className="description">Silicon Valley enterprise specializing in big data solutions for natural language processing. Leading product development and strategic partnerships across global markets.</p>
+                <p className="description">
+                  Trusted by Fortune 500s and national governments to architect data-driven transformations, specializing in natural language & computer vision. 
+                  Leading product development and strategic partnerships across global markets.
+                </p>
               </div>
 
-              <div className="venture">
-                <div className="venture-header">
-                  <h3 className="company">WSD</h3>
-                  <span className="status-badge current">Current</span>
-                </div>
-                <p className="role">Head of Filing Services</p>
-                <p className="period">2023 – Present</p>
-                <p className="description">SaaS-based technology solutions for structured products and OTC derivatives. Overseeing regulatory compliance and filing automation systems.</p>
+              <div className="box">
+                <h2 className="project-title"><HeartHandshake size={14}/> Angel Investing</h2>
+
+                <p className="project-details">2021 – Present</p>
+                <ul className="project-description" style={{color: "#666666"}}>
+                  <li>&nbsp; &nbsp; <a href="https://ahiri.ca/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Ahiri</a> (Marketplaces), 2021</li>
+                  <li>&nbsp; &nbsp; <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Dorsal.fyi</a> (Healthcare AI), 2024</li>
+                </ul>
               </div>
             </section>
 
             {/* Recent Exits */}
             <section className="section">
-              <h2 className="section-title">Recent Exits</h2>
+              <h2 className="section-title">Successful Exits</h2>
+              <div className="venture">
+                <div className="venture-header">
+                  <h3 className="company">WSD</h3>
+                  <span className="status-badge exited">Exited</span>
+                </div>
+                <p className="role">Global Head of Filing Services</p>
+                <p className="period">2023 – 2025</p>
+                <p className="description">
+                  Solutions for structured products and OTC derivatives. 
+                  Overseeing regulatory compliance and filing automation systems.
+                </p>
+              </div>
               
               <div className="venture">
                 <div className="venture-header">
@@ -76,17 +105,38 @@ function App() {
                 </div>
                 <p className="role">Founder & CEO</p>
                 <p className="period">2020 – 2023</p>
-                <p className="description">First fully automated end-to-end EDGARization and filing solution. Successfully acquired by WSD in 2023, revolutionizing regulatory compliance technology.</p>
+                <p className="description">
+                  Acquired by <a href="https://wsd.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>WSD</a>. 
+                  Built the first fully automated, end-to-end tool for SEC-compliant filing and electronic document conversion (EDGARization). 
+                  Used by Citigroup, Barclays, and other Tier 1 banks. 
+                </p>
               </div>
 
               <div className="venture">
                 <div className="venture-header">
-                  <h3 className="company">Previous Ventures</h3>
-                  <span className="status-badge acquired">Multiple Exits</span>
+                  <h3 className="company">Pinscriptive</h3>
+                  <span className="status-badge acquired">Acquired</span>
                 </div>
-                <p className="role">Founder & Technology Leader</p>
-                <p className="period">1998 – 2020</p>
-                <p className="description">Built and successfully exited multiple enterprise software companies focused on natural language processing and regulatory technology solutions.</p>
+                <p className="role">CTO</p>
+                <p className="period">2017 – 2018</p>
+                <p className="description">
+                  Acquired by Irish Acquisitions. 
+                  ML-driven precision medicine and population health platorm with sophisticated cohort analysis, launched in collaboration with&nbsp; 
+                  <a href="https://phs.org/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Presbyterian Healthcare Services</a> in Albuquerque, NM.
+                </p>
+              </div>
+
+              <div className="venture">
+                <div className="venture-header">
+                  <h3 className="company">Compliance Xpressware</h3>
+                  <span className="status-badge acquired">Acquired</span>
+                </div>
+                <p className="role">Founder & CEO</p>
+                <p className="period">2011 - 2020</p>
+                <p className="description">
+                  Acquired by <a href="https://www.newsfilecorp.com/" target="_blank" rel="noopener noreferrer" style={{color: "#666666"}}>Newsfile</a>, before being spun off into EDGAR Filing Service. 
+                  First cloud-hosted solution empowering Reporting Issuers to achieve compliance for their structured products.
+                </p>
               </div>
             </section>
 
@@ -94,12 +144,13 @@ function App() {
             <section className="section">
               <h2 className="section-title">Contact</h2>
               <div className="contact-links">
-                <a href="mailto:hello@fuadrahman.com" className="contact-link">
+                <div className="contact-link">
                   <Mail size={16} />
-                  hello@fuadrahman.com
-                </a>
+                  fuad [at] apurbatech.com
+                </div>
+                
                 <a href="https://linkedin.com/in/fuadrahman" target="_blank" rel="noopener noreferrer" className="contact-link">
-                  <Linkedin size={16} />
+                  <FaLinkedin size={16} />
                   LinkedIn
                   <ExternalLink size={14} />
                 </a>
@@ -115,7 +166,7 @@ function App() {
             <section className="hero">
               <h1 className="name">Dr. Fuad Rahman</h1>
               <p className="title">AI Pioneer & Professor</p>
-              <p className="subtitle">Pioneering natural language processing research since 1996. Professor at University of Arizona.</p>
+              <p className="subtitle">Finding cool new things to do with neural networks since 1992.</p>
               <div className="metrics">
                 <span className="metric">1,965 Citations</span>
                 <span className="metric">h-index 26</span>
@@ -132,9 +183,9 @@ function App() {
                   <h3 className="institution">University of Arizona</h3>
                   <span className="status-badge current">Current</span>
                 </div>
-                <p className="role">Professor</p>
+                <p className="role">Adjunct Professor</p>
                 <p className="period">2020 – Present</p>
-                <p className="description">Teaching and research in artificial intelligence, natural language processing, and computational linguistics. Leading graduate research programs.</p>
+                <p className="description">Teaching graduate students about AI entrepreneurship. Researching applied AI for medical devices and population health.</p>
               </div>
             </section>
 
@@ -143,52 +194,43 @@ function App() {
               <h2 className="section-title">Education</h2>
               
               <div className="education">
-                <h3 className="degree">Ph.D. in Pattern Recognition</h3>
-                <p className="institution">University of England</p>
+                <p className="institution">University of Kent</p>
+                <h3 className="degree">Ph.D. in Computer Vision & Pattern Recognition</h3>
                 <p className="year">1996</p>
-                <p className="description">Dissertation focused on optical character recognition and pattern recognition algorithms for low-resource languages, particularly Bengali language processing.</p>
-              </div>
-            </section>
-
-            {/* Research Impact */}
-            <section className="section">
-              <h2 className="section-title">Research Impact</h2>
-              
-              <div className="research-metrics">
-                <div className="metric-card">
-                  <div className="metric-number">1,965</div>
-                  <div className="metric-label">Total Citations</div>
-                  <div className="metric-description">Academic impact across computational linguistics and pattern recognition</div>
-                </div>
-                
-                <div className="metric-card">
-                  <div className="metric-number">26</div>
-                  <div className="metric-label">h-index</div>
-                  <div className="metric-description">Measure of research productivity and citation impact</div>
-                </div>
-                
-                <div className="metric-card">
-                  <div className="metric-number">46</div>
-                  <div className="metric-label">i10-index</div>
-                  <div className="metric-description">Publications with at least 10 citations each</div>
-                </div>
+                <p className="description">
+                  Dealt with building novel systems to classify objects such as calcification on breast mammograms, handwritten/printed characters, words and documents. 
+                  Early work with multiple classifiers ('experts') and unified frameworks/techniques for decisioning systems.<br></br><br></br>
+                  Supervisor: Prof. Michael Fairhurst | Computer Vision and Image Processing
+                </p>
               </div>
             </section>
 
             {/* Recent Publications */}
             <section className="section">
-              <h2 className="section-title">Recent Publications</h2>
+              <h2 className="section-title">Selected Publications</h2>
               
               <div className="publication">
-                <h3 className="paper-title">"From rules to models: Progresses in document layout analysis for low resource languages"</h3>
-                <p className="paper-details">2024 • Computational Linguistics</p>
-                <p className="paper-description">Latest research on advancing document analysis techniques for underrepresented languages, building on decades of NLP expertise.</p>
+                <h3 className="paper-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1386505624004271" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
+                  "OptimCLM: Optimizing clinical language models for predicting patient outcomes via knowledge distillation, pruning and quantization"
+                </a></h3>
+                <p className="paper-details">2025 • Co-authors: MJ Hasan, N Mohammed </p>
+                <p className="paper-description">Latest research small language models in healthcare, achieving 22.88 x compression and 28.7 x speedup with minimal AUROC loss.</p>
               </div>
 
               <div className="publication">
-                <h3 className="paper-title">Bengali Language Processing Research</h3>
-                <p className="paper-details">1996 – Present • Multiple Publications</p>
+                <h3 className="paper-title"><a href="https://link.springer.com/chapter/10.1007/3-540-45869-7_21" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
+                Multiple classifier combination for character recognition: revisiting the majority voting system and its variations
+                </a></h3>
+                <p className="paper-details">2002 • Co-authors: H Alam, MC Fairhurst</p>
                 <p className="paper-description">Pioneering work in natural language processing for Bengali, serving 400+ million speakers worldwide. Early contributions to OCR and pattern recognition.</p>
+              </div>
+
+              <div className="publication">
+                <h3 className="paper-title"><a href="https://hrcak.srce.hr/clanak/221156" target="_blank" rel="noopener noreferrer" style={{ color: "#fdf4ff" }}>
+                  A complete Bengali OCR: A novel hybrid approach to handwritten Bengali character recognition
+                </a></h3>
+                <p className="paper-details">1998 • Co-author: M Kaykobad</p>
+                <p className="paper-description">The first OCR for Bengali, serving 400+ million speakers worldwide. With the data/compute limitations of the time, this SOTA model combined structural analysis and template matching.</p>
               </div>
             </section>
 
@@ -198,30 +240,31 @@ function App() {
               
               <div className="research-areas">
                 <div className="research-area">
-                  <h3 className="area-title">Natural Language Processing</h3>
-                  <p className="area-description">Computational linguistics, pattern recognition, and machine learning for language understanding.</p>
+                  <h3 className="area-title">Vertical AI</h3>
+                  <p className="area-description">Domain-specific applications of machine learning including modeling disease outbreaks, consensus mechanisms, and radiology.</p>
                 </div>
                 
                 <div className="research-area">
                   <h3 className="area-title">Low-Resource Languages</h3>
-                  <p className="area-description">Developing NLP solutions for underrepresented languages, particularly Bengali and South Asian languages.</p>
+                  <p className="area-description">Seminal research on underrepresented languages, particularly Bengali, spanning document classification, OCR, accessiblity.</p>
                 </div>
                 
                 <div className="research-area">
                   <h3 className="area-title">Document Analysis</h3>
-                  <p className="area-description">Optical character recognition, document layout analysis, and automated text extraction systems.</p>
+                  <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD program.</p>
                 </div>
               </div>
             </section>
 
             {/* Military & Government Work */}
             <section className="section">
-              <h2 className="section-title">Government & Military Research</h2>
+              <h2 className="section-title"><ShieldHalf size={14}/> US Military & Defense Contractor</h2>
               
-              <div className="government-work">
-                <h3 className="project-title">US Military Contractor</h3>
-                <p className="project-details">US Navy, Army, Air Force • 2010 – Present</p>
-                <p className="project-description">Advanced research and development projects for military applications. Extensive experience visiting US military facilities and developing specialized NLP solutions for defense applications.</p>
+              <div className="box">
+                <h3 className="project-title">Principal Investigator</h3>
+                <p className="project-details">US Navy, Army, Air Force • 2001 – 2009</p>
+                <p className="project-description">Wrote and won grants for advanced research, focusing on applied NLP, information retrieval, and touchscreen human-computer interfaces for defense use cases. Developed SOTA domain-specific NLP during the AI winter. Conducted field visits to U.S. military installations for mission-critical deployment.
+                </p>
               </div>
             </section>
 
@@ -229,11 +272,13 @@ function App() {
             <section className="section">
               <h2 className="section-title">Academic Profiles</h2>
               <div className="contact-links">
-                <a href="https://scholar.google.com/citations?user=example" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <a href="https://scholar.google.com/citations?user=26mUJmEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  <GraduationCap size={14} />
                   Google Scholar
                   <ExternalLink size={14} />
                 </a>
-                <a href="https://arizona.edu/faculty/fuadrahman" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <a href="https://acabi.uahs.arizona.edu/person/fuad-rahman" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  <LetterText size={14} />
                   University of Arizona
                   <ExternalLink size={14} />
                 </a>

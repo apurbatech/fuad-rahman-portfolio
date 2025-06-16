@@ -150,6 +150,14 @@ body {
   margin-bottom: 32px;
 }
 
+.subsubtitle {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 32px;
+  color: #666666;
+}
+
 .ventures .subtitle {
   color: #999999;
 }
@@ -233,7 +241,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-.status-badge.active {
+.status-badge.exited {
   background-color: #f0f9ff;
   color: #0369a1;
 }
@@ -407,7 +415,7 @@ body {
   line-height: 1.5;
 }
 
-.government-work {
+.box {
   padding: 24px;
   border: 1px solid #333333;
   border-radius: 8px;
