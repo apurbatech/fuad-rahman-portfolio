@@ -94,7 +94,7 @@ function App() {
                 <p className="period">2023 – 2025</p>
                 <p className="description">
                   Solutions for structured products and OTC derivatives. 
-                  Overseeing regulatory compliance and filing automation systems.
+                  Oversaw and scaled the  regulatory compliance and filing automation systems practice.
                 </p>
               </div>
               
@@ -198,7 +198,7 @@ function App() {
                 <p className="year">1996</p>
                 <p className="description">
                   Dealt with building novel systems to classify objects such as calcification on breast mammograms, handwritten/printed characters, words and documents. 
-                  Early work with multiple classifiers techniques ('mixture of experts') and unified frameworks for decisioning systems.<br /><br />
+                  Concurrently worked with multiple classifiers techniques ('mixture of experts') and other unified frameworks for decisioning systems.<br /><br />
                   Supervisor: Prof. Michael Fairhurst | Computer Vision and Image Processing
                 </p>
               </div>
@@ -221,7 +221,7 @@ function App() {
                 
                 <div className="research-area">
                   <h3 className="area-title" style={{ color: "#0369a1" }}><BookType size={14}/> Document Analysis</h3>
-                  <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD program.</p>
+                  <p className="area-description">Semgentation, text extraction, sentiment analysis, summarization since the early 90s, coinciding with the beginning of my PhD.</p>
                 </div>
               </div>
             </section>
