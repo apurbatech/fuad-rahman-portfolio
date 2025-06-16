@@ -170,6 +170,9 @@ body {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .metric {
@@ -179,7 +182,6 @@ body {
   border-radius: 20px;
   white-space: nowrap;
   display: inline-block;
-  max-width: 100%;
 }
 
 .ventures .metric {
