@@ -166,15 +166,6 @@ body {
   color: #999999;
 }
 
-.metrics {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  min-width: 0;
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
 .metric {
   font-size: 14px;
   font-weight: 500;

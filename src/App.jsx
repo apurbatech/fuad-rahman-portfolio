@@ -46,7 +46,7 @@ function App() {
               <p className="subsubtitle">Audiophile, 2x Burner, Trekkie, Philanthropist, Father</p>
 
 
-              <div className="metrics">
+              <div>
                 <span className="status-badge" style={{ color: "#c0362c" }}>Bay Area</span>
                 <span className="status-badge">Four Exits</span>
                 <span className="status-badge" style={{ color: "#166534" }}>Fintech</span>
@@ -167,7 +167,7 @@ function App() {
               <h1 className="name">Dr. Fuad Rahman</h1>
               <p className="title">AI Evangelist & Professor</p>
               <p className="subtitle">Finding cool new things to do with neural networks since 1992.</p>
-              <div className="metrics">
+              <div>
                 <span className="status-badge exited" style={{ color: "#c0362c" }}>1,965 Citations</span>
                 <span className="status-badge exited">h-index 26</span>
                 <span className="status-badge current" style={{ color: "#0369a1" }}>i10-index 46</span>
