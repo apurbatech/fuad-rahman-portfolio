@@ -48,8 +48,11 @@ function App() {
 
               <div>
                 <span className="status-badge" style={{ color: "#c0362c" }}>Bay Area</span>
+                &nbsp;
                 <span className="status-badge">Four Exits</span>
+                &nbsp;
                 <span className="status-badge" style={{ color: "#166534" }}>Fintech</span>
+                &nbsp;
                 <span className="status-badge" style={{ color: "#0369a1" }}>Healthtech</span>
               </div>
             </section>
@@ -62,6 +65,27 @@ function App() {
                 <div className="venture-header">
                   <h3 className="company">Apurba Technologies</h3>
                   <span className="status-badge current">Current</span>
+                </div>
+                <div className="project-description" >
+                  <a 
+                    href="https://apurbatech.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-sm hover:underline inline-flex items-center gap-1"
+                    style={{color: "#666666"}}
+                  >
+                    United States <ExternalLink size={10} />
+                  </a>
+                  &nbsp;&nbsp;
+                  <a 
+                    href="https://apurba.com.bd" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-sm hover:underline inline-flex items-center gap-1"
+                    style={{color: "#666666"}}
+                  >
+                    Bangladesh <ExternalLink size={10} />
+                  </a>
                 </div>
                 <p className="role">Founder & CEO</p>
                 <p className="period">2009 – Present</p>
@@ -169,7 +193,9 @@ function App() {
               <p className="subtitle">Finding cool new things to do with neural networks since 1992</p>
               <div>
                 <span className="status-badge exited" style={{ color: "#c0362c" }}>1,965 Citations</span>
+                &nbsp;
                 <span className="status-badge exited">h-index 26</span>
+                &nbsp;
                 <span className="status-badge current" style={{ color: "#0369a1" }}>i10-index 46</span>
               </div>
             </section>
